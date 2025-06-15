@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MediFort 4.0</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Favicon: Minimalist Neon Green Castle SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg width='32' height='32' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='2' y='13' width='28' height='15' rx='3' fill='%2300ff94'/%3E%3Crect x='12' y='7' width='8' height='21' rx='1.5' fill='%23008549'/%3E%3Crect x='15' y='17' width='2' height='11' rx='1' fill='%23006839'/%3E%3Crect x='5' y='18' width='4' height='10' rx='1' fill='%23008549'/%3E%3Crect x='23' y='18' width='4' height='10' rx='1' fill='%23008549'/%3E%3C/svg%3E">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&family=Inter:wght@400;600&family=DM+Sans:wght@700&display=swap" rel="stylesheet">
+  <!-- Chart.js for graphs -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    /* ...unchanged CSS... */
+    /* [CSS omitted for brevity: same as your original file] */
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="nav">
+    <a class="nav-logo" href="#">
+      <svg class="castle-icon" viewBox="0 0 32 32" fill="none">
+        <rect x="2" y="13" width="28" height="15" rx="3" fill="#00ff94"/>
+        <rect x="12" y="7" width="8" height="21" rx="1.5" fill="#008549"/>
+        <rect x="15" y="17" width="2" height="11" rx="1" fill="#006839"/>
+        <rect x="5" y="18" width="4" height="10" rx="1" fill="#008549"/>
+        <rect x="23" y="18" width="4" height="10" rx="1" fill="#008549"/>
+      </svg>
+      <span>MediFort 4.0</span>
+    </a>
+    <div class="nav-links">
+      <a href="#vault" class="nav-link">Sentinel Vault</a>
+      <a href="#synergy" class="nav-link">Synergy Suite</a>
+      <a href="#queue" class="nav-link">FlowGuard</a>
+      <a href="#eco" class="nav-link">EcoTrace</a>
+    </div>
+  </nav>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="main-title">MediFort 4.0</div>
+    <div class="hero-desc">
+      Secure care. Smart compliance. Zero compromise.<br>
+      <span>Modern hospitals demand more. We deliver it.</span>
+    </div>
+    <div class="feature-access-row">
+      <a class="feature-access-card" href="#vault">
+        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f5dd.png" alt="Vault" />
+        <div class="feature-access-title">Sentinel Vault</div>
+        <div class="feature-access-tagline">Immutable records</div>
+      </a>
+      <a class="feature-access-card" href="#synergy">
+        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f468-200d-1f4bb.png" alt="Collaboration" />
+        <div class="feature-access-title">Synergy Suite</div>
+        <div class="feature-access-tagline">Teamwork, secured</div>
+      </a>
+      <a class="feature-access-card" href="#queue">
+        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f6c2.png" alt="Queue" />
+        <div class="feature-access-title">FlowGuard</div>
+        <div class="feature-access-tagline">Predictive queues</div>
+      </a>
+      <a class="feature-access-card" href="#eco">
+        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/267b.png" alt="Recycle" />
+        <div class="feature-access-title">EcoTrace</div>
+        <div class="feature-access-tagline">Waste tracked</div>
+      </a>
+    </div>
+  </section>
+  <!-- SOS Floating Button -->
+  <a class="sos-fab" href="#sos" tabindex="0" aria-label="SOS Emergency">
+    <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f198.png" alt="SOS" />
+  </a>
+  <div class="sos-fab-label">Emergency SOS</div>
+  <!-- How MediFort Works -->
+  <section class="path-section">
+    <div class="path-title">How MediFort Works</div>
+    <div class="how-grid" id="medifort-path">
+      <!-- ...unchanged steps... -->
+      <div class="how-step" style="--delay:.1s">
+        <div class="how-step-number">01</div>
+        <div class="how-step-title">Authenticate</div>
+        <div class="how-step-desc">
+          Secure login for staff and patients. No weak links.
+        </div>
+      </div>
+      <div class="how-step" style="--delay:.2s">
+        <div class="how-step-number">02</div>
+        <div class="how-step-title">Encrypt & Store</div>
+        <div class="how-step-desc">
+          Data is encrypted, stored, and always compliant.
+        </div>
+      </div>
+      <div class="how-step" style="--delay:.3s">
+        <div class="how-step-number">03</div>
+        <div class="how-step-title">Sense & Predict</div>
+        <div class="how-step-desc">
+          AI monitors queues, rooms, and waste. Risks detected instantly.
+        </div>
+      </div>
+      <div class="how-step" style="--delay:.4s">
+        <div class="how-step-number">04</div>
+        <div class="how-step-title">Audit & Act</div>
+        <div class="how-step-desc">
+          All actions logged. Reports and audits, automated.
+        </div>
+      </div>
+      <div class="how-step" style="--delay:.5s">
+        <div class="how-step-number">05</div>
+        <div class="how-step-title">SOS Response</div>
+        <div class="how-step-desc">
+          One tap, instant alert, complete traceability.
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Problem Graphs Section -->
+  <section class="problems-section">
+    <div class="problems-title">Hospitals’ Real Risks</div>
+    <div class="graphs-flex">
+      <div class="graph-card">
+        <div class="graph-title">Data Breaches</div>
+        <div class="graph-desc">
+          Medical data attacks are rising. Protecting records is vital.
+        </div>
+        <canvas id="breachGraph" width="260" height="140" aria-label="Data Breaches Line Chart"></canvas>
+      </div>
+      <div class="graph-card">
+        <div class="graph-title">Patient Wait Times</div>
+        <div class="graph-desc">
+          Long waits cost trust and revenue. Predictive queueing solves this.
+        </div>
+        <canvas id="queueGraph" width="260" height="140" aria-label="Wait Times Bar Chart"></canvas>
+      </div>
+      <div class="graph-card">
+        <div class="graph-title">Waste Compliance</div>
+        <div class="graph-desc">
+          Fines for improper waste are up. Traceability is the answer.
+        </div>
+        <canvas id="wasteGraph" width="260" height="140" aria-label="Waste Compliance Doughnut"></canvas>
+      </div>
+    </div>
+  </section>
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="features-title">What You Get</div>
+    <div class="features-grid">
+      <div class="feature-card" id="vault">
+        <img class="feature-clipart" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f5dd.png" alt="Vault" />
+        <div class="feature-name">Sentinel Vault</div>
+        <div class="feature-tagline">
+          Immutable, patient-owned records. No leaks, no compromise.
+        </div>
+        <button class="feature-btn">Learn More</button>
+      </div>
+      <div class="feature-card" id="synergy">
+        <img class="feature-clipart" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f468-200d-1f4bb.png" alt="Collaboration" />
+        <div class="feature-name">Synergy Suite</div>
+        <div class="feature-tagline">
+          Secure, real-time doctor teamwork. Every action, logged.
+        </div>
+        <button class="feature-btn">Learn More</button>
+      </div>
+      <div class="feature-card" id="queue">
+        <img class="feature-clipart" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f6c2.png" alt="Queue" />
+        <div class="feature-name">FlowGuard</div>
+        <div class="feature-tagline">
+          AI-powered queueing. Smooth flow, happier patients.
+        </div>
+        <!-- Link to Smart Queue Monitor here -->
+        <a href="http://localhost:5000/" target="_blank" rel="noopener">
+          <button class="feature-btn">Open Smart Queue Monitor</button>
+        </a>
+      </div>
+      <div class="feature-card" id="eco">
+        <img class="feature-clipart" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/267b.png" alt="Recycle" />
+        <div class="feature-name">EcoTrace</div>
+        <div class="feature-tagline">
+          Waste traced from bin to disposal. Audit-proof.
+        </div>
+        <!-- Link to EcoTrace here -->
+        <a href="http://127.0.0.1:5500/Waste-Tracker-main/Waste-Tracker-main/Blckchain/BC.html" target="_blank" rel="noopener">
+          <button class="feature-btn">Open EcoTrace</button>
+        </a>
+      </div>
+      <div class="feature-card" id="sos">
+        <img class="feature-clipart" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f198.png" alt="SOS" />
+        <div class="feature-name">RapidShield SOS</div>
+        <div class="feature-tagline">
+          Instant, logged emergency alerts. Ready always.
+        </div>
+        <button class="feature-btn">Learn More</button>
+      </div>
+    </div>
+  </section>
+  <!-- Resources / Blog / Legal Section -->
+  <section class="resources-section">
+    <div class="resources-title">Company Resources & Legal</div>
+    <div class="resources-grid">
+      <div class="resource-card">
+        <div class="resource-title">Resources</div>
+        <div class="resource-desc">
+          Download whitepapers, case studies, product docs, API guides.<br>
+          <span style="color:#b5ffd9;font-size:.92em;">(Coming Soon)</span>
+        </div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-title">Blog</div>
+        <div class="resource-desc">
+          Latest news, security tips, innovation stories, team insights.<br>
+          <span style="color:#b5ffd9;font-size:.92em;">(Coming Soon)</span>
+        </div>
+      </div>
+      <div class="resource-card">
+        <div class="resource-title">Legal</div>
+        <div class="resource-desc">
+          Privacy policy, terms of service, compliance statements.<br>
+          <span style="color:#b5ffd9;font-size:.92em;">(Coming Soon)</span>
+        </div>
+      </div>
+    </div>
+    <div class="resources-motto">
+      <span style="color:var(--green-neon);">MediFort:</span> "Fortifying Care, Empowering Trust. Our technology, your safeguard."
+    </div>
+  </section>
+  <div class="footer">
+    &copy; MediFort 4.0 &ndash; Detroit Debuggers
+  </div>
+  <script>
+    // SOS button label show/hide for accessibility
+    const sosFab = document.querySelector('.sos-fab');
+    const sosFabLabel = document.querySelector('.sos-fab-label');
+    sosFab.addEventListener('mouseenter', () => { sosFabLabel.style.opacity = "1"; sosFabLabel.style.transform = "translateY(0)"; });
+    sosFab.addEventListener('mouseleave', () => { sosFabLabel.style.opacity = "0"; sosFabLabel.style.transform = "translateY(14px)"; });
+    sosFab.addEventListener('focus', () => { sosFabLabel.style.opacity = "1"; sosFabLabel.style.transform = "translateY(0)"; });
+    sosFab.addEventListener('blur', () => { sosFabLabel.style.opacity = "0"; sosFabLabel.style.transform = "translateY(14px)"; });
+
+    // Animate features/path steps on scroll
+    function animateCards() {
+      // Features & How steps
+      document.querySelectorAll('.feature-card').forEach(card => {
+        const rect = card.getBoundingClientRect();
+        if(rect.top < window.innerHeight - 80) {
+          card.style.opacity = 1;
+          card.style.transform = 'none';
+        }
+      });
+      // How steps shuffle then arrange
+      const pathGrid = document.getElementById('medifort-path');
+      const steps = pathGrid ? pathGrid.querySelectorAll('.how-step') : [];
+      let count = 0;
+      steps.forEach((step, i) => {
+        const rect = step.getBoundingClientRect();
+        // Shuffle: random rotation before arrange
+        if(rect.top < window.innerHeight - 80 && !step.classList.contains('active')) {
+          setTimeout(() => {
+            step.style.setProperty('--random-rot', `${Math.floor(Math.random()*10-5)}deg`);
+            step.classList.add('active');
+          }, 120*i);
+          count++;
+        }
+      });
+    }
+    window.addEventListener('scroll', animateCards);
+    window.addEventListener('DOMContentLoaded', () => {
+      // Assign initial random rotations to how-steps
+      document.querySelectorAll('.how-step').forEach(step => {
+        step.style.setProperty('--random-rot', `${Math.floor(Math.random()*30-15)}deg`);
+      });
+      animateCards();
+    });
+    // Smooth scroll for nav and feature buttons/cards
+    document.querySelectorAll('.nav-link, .feature-btn, .feature-access-card, .sos-fab').forEach(link => {
+      link.addEventListener('click', function(e){
+        const href = this.getAttribute('href') || this.parentNode.getAttribute('href');
+        if(href && href.startsWith("#")) {
+          const target = document.querySelector(href);
+          if(target) {
+            e.preventDefault();
+            target.scrollIntoView({behavior:'smooth', block:'center'});
+          }
+        }
+      });
+    });
+    // Graph data for Chart.js (colorful, neon palette)
+    document.addEventListener("DOMContentLoaded", function(){
+      new Chart(document.getElementById('breachGraph').getContext('2d'), {
+        type: 'line',
+        data: {
+          labels: ['2018','2019','2020','2021','2022','2023','2024'],
+          datasets: [{
+            label: 'Breaches',
+            data: [21, 30, 48, 61, 77, 92, 105],
+            borderColor: '#00ff94',
+            backgroundColor: 'rgba(0,255,148,0.14)',
+            fill: true,
+            tension: 0.38,
+            pointRadius: 4,
+            pointBackgroundColor: '#2af7ec',
+            pointBorderColor: '#00ff94',
+            pointHoverBackgroundColor: '#fff',
+            pointHoverBorderColor: '#00ff94'
+          },
+          {
+            label: 'Industry Avg',
+            data: [16, 18, 23, 33, 36, 41, 52],
+            borderColor: '#ff4b91',
+            backgroundColor: 'rgba(255,75,145,0.08)',
+            fill: false,
+            tension: 0.38,
+            borderDash: [7,7],
+            pointRadius: 0,
+          }
+        ]
+        },
+        options: {
+          plugins: { 
+            legend: { display: true, labels:{color:'#fff', font:{family:'IBM Plex Sans', weight:'bold'}} },
+            tooltip: { enabled:true, backgroundColor:'#101', borderColor:'#00ff94', borderWidth:1, titleColor:'#00ff94', bodyColor:'#fff'}
+          },
+          scales: {
+            x: { ticks: { color: '#fff', font: { family: 'IBM Plex Sans'}}, grid: {display:false}},
+            y: { ticks: { color: '#fff', font: { family: 'IBM Plex Sans'}}, grid: {display:false}}
+          }
+        }
+      });
+      new Chart(document.getElementById('queueGraph').getContext('2d'), {
+        type: 'bar',
+        data: {
+          labels: ['Mon','Tue','Wed','Thu','Fri','Sat'],
+          datasets: [{
+            label: 'Minutes',
+            data: [43, 38, 45, 39, 41, 50],
+            backgroundColor: [
+              '#00ff94', '#2af7ec', '#ff4b91', '#57c7fa', '#ea9cfa', '#f3f869'
+            ],
+            borderRadius: 14,
+            borderWidth: 1.2,
+            borderColor: [
+              '#008549', '#008549', '#d10057', '#008549', '#a800a0', '#aabf00'
+            ]
+          }]
+        },
+        options: {
+          plugins: { 
+            legend: { display: false },
+            tooltip: { enabled:true, backgroundColor:'#111', titleColor:'#00ff94', bodyColor:'#fff' }
+          },
+          scales: {
+            x: { ticks: { color: '#fff', font: { family: 'IBM Plex Sans'}}, grid: {display:false}},
+            y: { ticks: { color: '#fff', font: { family: 'IBM Plex Sans'}}, grid: {display:false}}
+          }
+        }
+      });
+      new Chart(document.getElementById('wasteGraph').getContext('2d'), {
+        type: 'doughnut',
+        data: {
+          labels: ['Compliant', 'Non-Compliant'],
+          datasets: [{
+            data: [86,14],
+            backgroundColor: ['#00ff94', '#ff4b91'],
+            borderWidth: 0
+          }]
+        },
+        options: {
+          plugins: { 
+            legend: { labels: { color: '#fff', font: { family: 'IBM Plex Sans', size: 13 } } },
+            tooltip: { enabled:true, backgroundColor:'#101', titleColor:'#00ff94', bodyColor:'#fff' }
+          },
+          cutout: '65%',
+        }
+      });
+    });
+    // Interactive feature: click to show more info (dummy)
+    document.querySelectorAll('.feature-btn').forEach(btn => {
+      // Only add alert for "Learn More" buttons, not those that open links
+      if(btn.textContent.includes('Learn More')){
+        btn.addEventListener('click', function(e){
+          e.preventDefault();
+          const parent = this.closest('.feature-card');
+          if(!parent) return;
+          let name = parent.querySelector('.feature-name')?.textContent?.trim() || "Feature";
+          let tagline = parent.querySelector('.feature-tagline')?.textContent?.trim() || "";
+          alert(`${name}\n\n${tagline}\n\nFull details coming soon!`);
+        });
+      }
+    });
+    // Interactive resource cards
+    document.querySelectorAll('.resource-card').forEach(card => {
+      card.addEventListener('click', function(e){
+        e.preventDefault();
+        alert("This resource will be available soon!");
+      });
+    });
+  </script>
+</body>
+</html>
